@@ -3,5 +3,5 @@
 <input type="text" [(ngModel)]='serverName'>
 {{serverName}}
 <button class="btn btn-primary" [disabled]="!allowAddServer" (click)="onClickButton()"> Add new Server</button>
-<p>{{serverStatus}}</p>
+<p *ngIf="serverCreated">Server Create with Name: {{serverStatus}}</p>
 <app-server></app-server>
